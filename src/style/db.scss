@@ -1,0 +1,149 @@
+@import '../assets/theme/variable.scss';
+.active-btn {
+  font-size: 28px;
+}
+.inactive-btn {
+  font-size: 18px;
+  cursor: pointer;
+}
+.switch-division {
+  font-size: 50px;
+  color: #ccc;
+}
+.title {
+  vertical-align:middle;
+}
+.titleIcon {
+  height: 2em;
+  width: 2em;
+  vertical-align: -0.6em;
+}
+.dbForm {
+  margin-top: -10px;
+}
+.formItem {
+  margin-right: 0!important;
+  margin-bottom: 0!important;
+  height: 30px!important;
+  width: 80%;
+}
+.header {
+  height: 40px;
+  line-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -20px;
+}
+.edit,
+.delete,
+.monitor {
+  padding: 0 5px;
+  line-height: 40px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.edit {
+  float: right;
+  @include primary-color;
+}
+.delete {
+  float: right;
+  color: #f56c6c;
+}
+.monitor {
+  float: right;
+  font-size: 1em;
+  height: 100%;
+}
+.normal-silk-ribbon,
+.abnormal-silk-ribbon,
+.unkown-silk-ribbon,
+.lsnAbnormal-silk-ribbon {
+  text-align: center;
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  border: 1px dashed #fff;
+  color: #fff;
+	bottom: 20px;
+	right: -70px;
+  z-index: 2;
+  transform: rotate(315deg);
+}
+.normal-silk-ribbon {
+  box-shadow: 0 0 0 3px rgba(50, 157, 50, 1),0px 21px 5px -18px rgba(0,0,0,0.6);
+	background: rgba(50, 157, 50, 1);
+}
+.abnormal-silk-ribbon {
+  box-shadow: 0 0 0 3px rgb(202, 39, 39),0px 21px 5px -18px rgba(0,0,0,0.6);
+	background :rgb(202, 39, 39);
+}
+.unkown-silk-ribbon,
+.lsnAbnormal-silk-ribbon {
+  box-shadow: 0 0 0 3px rgb(158, 158, 22),0px 21px 5px -18px rgba(0,0,0,0.6);
+	background :rgb(158, 158, 22);
+}
+.silk-ribbon {
+	position: relative;
+  overflow: visible!important;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+.normal-wrap,
+.abnormal-wrap,
+.unkown-wrap,
+.lsnAbnormal-wrap  {
+	width:100%;
+	height: 100%;
+	position:absolute;
+	bottom: -8px;
+	right: -8px;
+	overflow:hidden;
+}
+.normal-wrap:before,
+.abnormal-wrap:before,
+.unkown-wrap:before,
+.lsnAbnormal-wrap:before {
+	content: "";
+	display: block;
+	border-radius: 0 0 10px 10px;
+	width: 40px;
+	height: 8px;
+	position: absolute;
+	right: 58px;
+  bottom: 0;
+}
+.normal-wrap:after,
+.abnormal-wrap:after,
+.unkown-wrap:after,
+.lsnAbnormal-wrap:after {
+	content:"";
+	display:block;
+	border-radius:0px 10px 10px 0px;
+	width:8px;
+	height:40px;
+	position:absolute;
+	right:0px;
+	bottom:60px;
+}
+.normal-wrap:before,
+.normal-wrap:after {
+  background: #136113;
+}
+.abnormal-wrap:before,
+.abnormal-wrap:after {
+  background: #6b1717;
+}
+.unkown-wrap:before,
+.unkown-wrap:after,
+.lsnAbnormal-wrap:before,
+.lsnAbnormal-wrap:after {
+  background: #7c7c11;
+}

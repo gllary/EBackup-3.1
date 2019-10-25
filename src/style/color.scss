@@ -1,0 +1,22 @@
+$success-color: rgb(39, 202, 39);
+$error-color: rgb(202, 39, 39);
+$loading-color: rgb(32, 163, 32);
+$waiting-color: rgb(158, 158, 22);
+$delete-color: rgb(223, 77, 77);
+.successColor {
+  color: $success-color;
+}
+
+.errorColor {
+  color: $error-color;
+}
+.deleteColor {
+  color: $delete-color;
+}
+
+.loadingColor {
+  color: $loading-color;
+}
+.waitingColor {
+  color: $waiting-color;
+}

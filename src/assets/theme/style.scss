@@ -1,0 +1,34 @@
+@import './variable.scss';
+@import './_themes.scss';
+
+.routerLink {
+  @include router-link;
+}
+.text-color {
+  @include text-color;
+}
+.switch-text {
+  @include gray-text-color;
+}
+.primaryLink {
+  @include router-link;
+}
+.viceLink {
+  @include themeify {
+    color: themed(vice-color);
+    text-decoration: none;
+  }
+}
+.modalScroll::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+}
+.modalScroll::-webkit-scrollbar-track {
+  @include modalScrollBarTrackColor;
+}
+.modalScroll::-webkit-scrollbar-thumb {
+  @include modalScrollbarThumbColor;
+}
+.modalScroll::-webkit-scrollbar-corner {
+  @include modalScrollBarCornerColor;
+}

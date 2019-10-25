@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import './_themes.scss';
+
+@mixin themeify {
+  @each $theme-name, $theme-map in $themes {
+    $theme-map: $theme-map !global;
+    body[data-theme=#{$theme-name}] & {
+      @content;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin primary-color {
+  @include themeify {
+    color: themed('primary-color')
+  }
+}
+
+@mixin vice-color {
+  @include themeify {
+    color: themed('vice-color')
+  }
+}
+
+@mixin router-link {
+  @include themeify {
+    color: themed('primary-color');
+    text-decoration: none;
+  }
+}
+
+@mixin main-background-color {
+  @include themeify {
+    background-color: themed('main-background-color')
+  }
+}
+
+@mixin content-background-color {
+  @include themeify {
+    background-color: themed('content-background-color')
+  }
+}
+
+@mixin content-shadow-color {
+  @include themeify {
+    border-color: themed('content-shadow-color')
+  }
+}
+
+@mixin text-color {
+  @include themeify {
+    color: themed('text-color')
+  }
+}
+
+@mixin host-link-content-color {
+  @include themeify {
+    background-color: themed('host-link-content-color')
+  }
+}
+
+@mixin scrollbarThumbColor {
+  @include themeify {
+    background: themed('scrollbar-thumb-bg-color') !important;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@mixin scrollbarTrackColor {
+  @include themeify {
+    background: themed('scrollbar-track-bg-color');
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+  }
+}
+
+@mixin modalScrollbarThumbColor {
+  @include themeify {
+    background: themed('modal-scrollbar-thumb-bg-color') !important;
+  }
+}
+
+@mixin modalScrollBarCornerColor {
+  @include themeify {
+    background: themed('modal-scrollbar-corner-bg-color') !important;
+  }
+}
+
+@mixin modalScrollBarTrackColor {
+  @include themeify {
+    background: themed('modal-scrollbar-track-bg-color')
+  }
+}
+
+@mixin gray-text-color {
+  @include themeify {
+    color: themed('gray-text-color')
+  }
+}
