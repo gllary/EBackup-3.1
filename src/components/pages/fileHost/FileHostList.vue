@@ -10,13 +10,13 @@
           </el-checkbox-group>
         </el-form-item>
         <el-form-item style="float: right;">
+            <el-button type="success"
+                      @click="toguide()">操作说明</el-button>
+          </el-form-item>
+        <el-form-item style="float: right;">
           <el-button type="primary"
                     @click="addFn">添加</el-button>
       </el-form-item>
-      <el-form-item style="float: right;">
-          <el-button type="success"
-                    @click="toguide()">操作说明</el-button>
-        </el-form-item>
     </el-form>
     </el-row>
     <el-table :data="filteredInfos"

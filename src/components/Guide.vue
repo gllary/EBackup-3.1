@@ -1,7 +1,7 @@
 <template>
 <el-container style="height: 100%; border: 1px solid #eee">
     <el-header style=" font-size: 12px;"> 
-      <h3 style="line-height:40px;height:40px;color:white"><a href="/dashboard" style="text-decoration: none; color: white;font-size: 18px"><i class="el-icon-s-home"></i>主页 |</a>  信服易备操作手册</h3>
+      <h3 style="line-height:40px;height:40px;color:white"><router-link :to="{ name: 'dashboard'}" style="color: white;font-size: 18px;"><i class="el-icon-s-home"></i>主页</router-link> |  信服易备操作手册</h3>
     </el-header>
 
   <el-container style="height: calc(100% - 120px)" class="middle">
@@ -142,7 +142,7 @@
           let select = localStorage.getItem('pathid');
           if(select!=null){
             if(select !=index){
-              document.querySelector('.main').scrollIntoView({behavior:'smooth'});
+              document.querySelector('.main').scrollIntoView({block:"start"});
             }
           }
           localStorage.setItem('pathid',index);
@@ -169,6 +169,9 @@
   .el-aside {
     @include main-background-color;
     color: #333;
+  }
+  .el-menu{
+    height: 100%;
   }
   .middle{
     @include main-background-color;

@@ -3,13 +3,13 @@
     <el-row>
       <el-form inline
              size="small">
+             <el-form-item style="float: right;">
+                <el-button type="success"
+                          @click="toguide('emilmanage')">操作说明</el-button>
+            </el-form-item>
         <el-form-item style="float: right;">
           <el-button type="primary"
                     @click="createModalVisible=true">添加</el-button>
-        </el-form-item>
-        <el-form-item style="float: right;">
-            <el-button type="success"
-                      @click="toguide('emilmanage')">操作说明</el-button>
         </el-form-item>
     </el-form>
     </el-row>

@@ -85,9 +85,9 @@
               fetchData(){
                   let str = '#'+this.$route.query.aId;
                   if(str == '#addApplicationManual'){
-                    document.querySelector('#addApplication').scrollIntoView({behavior:"smooth"});
+                    document.querySelector('#addApplication').scrollIntoView({block:"start"});
                 }else if(str != null){
-                    document.querySelector(str).scrollIntoView({behavior:"smooth"});
+                    document.querySelector(str).scrollIntoView({block:"start"});
                   }
               },
         }

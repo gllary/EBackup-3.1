@@ -7,13 +7,13 @@
                       @delete="deleteServer"
                       :vm-type="vmType">
           <template slot="other">
-            <el-button type="success" size="small" @click="toguide">操作说明</el-button>
             <el-button type="primary" @click="buttonClickHandler" :disabled="disabled" size="small">
               {{isSelect ? '添加备份计划' : '添加主机'}}
             </el-button>
             <el-button type="info" @click="takeOverClick" :disabled="disabled" size="small" v-if="[1, 3].includes(vmType)">
               {{isSelect ? '接管初始化' : '一键接管'}}
             </el-button>
+            <el-button type="success" size="small" @click="toguide">操作说明</el-button>
           </template>
         </server-table>
         <backup-plan-modal type="vm"

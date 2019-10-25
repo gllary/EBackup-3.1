@@ -183,9 +183,9 @@
               fetchData(){
                   let str = '#'+this.$route.query.aId;
                   if(str == '#equipmentManageManual'){
-                    document.querySelector('#equipmentManage').scrollIntoView({behavior:"smooth"});
+                    document.querySelector('#equipmentManage').scrollIntoView({block:"start"});
                   }else if(str != null){
-                    document.querySelector(str).scrollIntoView({behavior:"smooth"});
+                    document.querySelector(str).scrollIntoView({block:"start"});
                   }
               },
           },

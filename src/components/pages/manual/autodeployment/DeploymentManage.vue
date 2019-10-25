@@ -138,9 +138,9 @@
                   let str = '#'+this.$route.query.aId;
                 //   console.log(str)
                 if(str == '#deploymentManageManual'){
-                    document.querySelector('#deploymentManage').scrollIntoView({behavior:"smooth"});
+                    document.querySelector('#deploymentManage').scrollIntoView({block:"start"});
                   }else if(str != null){
-                    document.querySelector(str).scrollIntoView({behavior:"smooth"});
+                    document.querySelector(str).scrollIntoView({block:"start"});
                   }
               },
           },

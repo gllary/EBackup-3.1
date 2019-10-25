@@ -2,9 +2,9 @@
     <div>
         <el-row style="margin-bottom:10px;">
             <el-col style="text-align:right">
-                <el-button type="success" size="small" @click="toguide">操作说明</el-button>
                 <el-button type="primary" @click="addPlan" size="small">添加备份计划</el-button>
                 <el-button type="info" @click="stopPlan" :loading="buttonFlag" size="small">一键停止</el-button>
+                <el-button type="success" size="small" @click="toguide">操作说明</el-button>
             </el-col>
         </el-row>
         <el-row>

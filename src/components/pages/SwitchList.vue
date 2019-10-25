@@ -9,13 +9,13 @@
             <el-radio-button label="sqlserver">SQLServer</el-radio-button>
           </el-radio-group>
         </el-form-item>
-        <el-form-item style="float: right">
-          <el-button type="primary"
-                     @click="batchSwitch">添加</el-button>
-        </el-form-item>
         <el-form-item style="float: right;">
             <el-button type="success"
                       @click="toguide">操作说明</el-button>
+        </el-form-item>
+        <el-form-item style="float: right">
+          <el-button type="primary"
+                     @click="batchSwitch">添加</el-button>
         </el-form-item>
       </el-form>
     </el-row>

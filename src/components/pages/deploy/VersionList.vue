@@ -1,6 +1,10 @@
 <template>
   <section>
     <el-form inline size="medium" style="overflow: hidden">
+        <el-form-item style="float: right;">
+            <el-button type="success"
+                      @click="toguide('repository')">操作说明</el-button>
+        </el-form-item>
       <el-form-item style="float: right">
         <el-button type="primary"
                    @click="createVersion">添加</el-button>
@@ -8,10 +12,6 @@
       <el-form-item style="float: right">
         <el-button type="info"
                    @click="scanVersion">扫描</el-button>
-      </el-form-item>
-      <el-form-item style="float: right;">
-          <el-button type="success"
-                    @click="toguide('repository')">操作说明</el-button>
       </el-form-item>
     </el-form>
     <div style="position: relative"

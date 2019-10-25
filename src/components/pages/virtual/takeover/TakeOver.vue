@@ -212,7 +212,7 @@
                         <el-tooltip placement="top" effect="dark">
                             <div slot="content">
                                 一键接管功能操作</br>
-                                <el-button type="text" @click="goto('operation')" style="float: right; ">详细说明</el-button>
+                                <el-button type="text" @click="goto('operation')" style="float: right; "><li class="el-icon-question"></li></el-button>
                             </div>
                             <span :class="$style.dropdownLink">
                                 同步操作<i class="el-icon-arrow-down el-icon--right" style="font-size: 12px; margin-left: 0"></i>

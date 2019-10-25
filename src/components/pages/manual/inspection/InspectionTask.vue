@@ -111,9 +111,9 @@
               fetchData(){
                   let str = '#'+this.$route.query.aId;
                   if(str == '#inspectionTaskManual'){
-                    document.querySelector('#inspectionTask').scrollIntoView({behavior:"smooth"});
+                    document.querySelector('#inspectionTask').scrollIntoView({block:"start"});
                   }else  if(str != null){
-                    document.querySelector(str).scrollIntoView({behavior:"smooth"});
+                    document.querySelector(str).scrollIntoView({block:"start"});
                   }
               },
         }

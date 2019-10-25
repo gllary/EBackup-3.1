@@ -17,7 +17,6 @@
           </template>
         </el-col>
         <el-col :span="18" style="text-align:right">
-          <el-button type="success" size="small" @click="toguide">操作说明</el-button>
           <el-button size="small" type="primary" @click="buttonClick" >
             {{buttonflag ? '返回' : '查看已选虚拟机'}}
           </el-button>
@@ -26,6 +25,7 @@
                      @click="jumpToTakeOver">
             一键接管
           </el-button>
+          <el-button type="success" size="small" @click="toguide">操作说明</el-button>
         </el-col>
       </el-row>
     </div>

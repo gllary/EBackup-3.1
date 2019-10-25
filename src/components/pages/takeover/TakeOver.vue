@@ -10,6 +10,10 @@
           <el-radio label="mysql" border>MySql</el-radio>
         </el-radio-group>
       </el-form-item>
+      <el-form-item style="float: right;">
+          <el-button type="success"
+                    @click="toguide">操作说明</el-button>
+      </el-form-item>
       <el-form-item v-show="!enterFromMenu"
                     style="float: right;">
         <el-button type="info"
@@ -28,10 +32,6 @@
       <el-form-item style="float: right;">
         <el-button icon="el-icon-refresh"
                    @click="refreshData">刷新</el-button>
-      </el-form-item>
-      <el-form-item style="float: right;">
-          <el-button type="success"
-                    @click="toguide">操作说明</el-button>
       </el-form-item>
     </el-form>
     <section style="clear: both;">
@@ -207,7 +207,7 @@
                         <el-tooltip placement="top" effect="light">
                             <div slot="content">
                                 将业务重新转移到生产环境</br>
-                                <el-button type="text" @click="goto('qiezhu')" style="float: right; ">详细说明</el-button>
+                                <el-button type="text" @click="goto('qiezhu')" style="float: right; "><li class="el-icon-question"></li></el-button>
                             </div>
                         </el-tooltip>
 
@@ -217,7 +217,7 @@
                       <el-tooltip placement="top" effect="light">
                           <div slot="content">
                               IP切换操作</br>
-                              <el-button type="text" @click="goto('changeip')" style="float: right; ">详细说明</el-button>
+                              <el-button type="text" @click="goto('changeip')" style="float: right; "><li class="el-icon-question"></li></el-button>
                           </div>
                           <el-button type="text"
                           @click="switchHostIp(hostLink)"
@@ -227,7 +227,7 @@
                       <el-tooltip placement="top" effect="light">
                           <div slot="content">
                               生产环境故障时，将业务转移到易备环境</br>
-                              <el-button type="text" @click="goto('qiebei')" style="float: right; ">详细说明</el-button>
+                              <el-button type="text" @click="goto('qiebei')" style="float: right; "><li class="el-icon-question"></li></el-button>
                           </div>
                           <el-button type="text"
                           :disabled="!hostLink.databaseLinks.some(dbLink => dbLink.viceDatabase.role === 2)"
@@ -259,7 +259,7 @@
                           <el-tooltip placement="top" effect="light">
                               <div slot="content">
                                   相关操作的验证结果</br>
-                                  <el-button type="text" @click="goto('verification')" style="float: right; ">详细说明</el-button>
+                                  <el-button type="text" @click="goto('verification')" style="float: right; "><li class="el-icon-question"></li></el-button>
                               </div>
                               <el-dropdown-item @click.native="queryVerifyResult(hostLink)"
                                                 v-if="!(hostLink.primaryHost.databaseType === 1 && hostLink.primaryHost.oracleVersion === 1)">

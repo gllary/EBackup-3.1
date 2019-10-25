@@ -236,9 +236,9 @@
                 //   alert(this.$route.query.aId);
                   let str = '#'+this.$route.query.aId;
                   if(str == '#dataDaseManual'){
-                    document.querySelector('#dataDaseTakeOver').scrollIntoView({behavior:"smooth"});
+                    document.querySelector('#dataDaseTakeOver').scrollIntoView({block:"start"});
                   }else{
-                    document.querySelector(str).scrollIntoView({behavior:'smooth'});
+                    document.querySelector(str).scrollIntoView({block:"start"});
                   }
               },
               destroyed(){

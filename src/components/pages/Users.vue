@@ -2,15 +2,15 @@
   <div id="app">
     <el-row type="flex" class="row-bg" justify="end">
       <el-form inline>
+          <el-form-item style="float: right;">
+              <el-button type="success"
+                        @click="toguide('roleManage')">操作说明</el-button>
+          </el-form-item>
         <el-form-item style="float: right;">
           <el-button type="danger" :disabled="delDisabled" @click="delAll()">删除</el-button>
         </el-form-item>
         <el-form-item style="float: right;">
           <el-button type="primary" @click="handleCreate()">添加</el-button>
-        </el-form-item>
-        <el-form-item style="float: right;">
-            <el-button type="success"
-                      @click="toguide('roleManage')">操作说明</el-button>
         </el-form-item>
       </el-form>
     </el-row>

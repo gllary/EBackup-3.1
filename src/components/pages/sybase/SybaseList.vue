@@ -19,14 +19,14 @@
             <el-button slot="append" icon="el-icon-search" @click="searchByName"></el-button>
           </el-input>
         </el-form-item>
+        <el-form-item style="float: right;">
+            <el-button type="success"
+                      @click="toguide">操作说明</el-button>
+          </el-form-item>
         <el-form-item style="float: right">
           <el-button type="primary"
                      @click="addFn"
                      style="float: right">添加</el-button>
-        </el-form-item>
-        <el-form-item style="float: right;">
-          <el-button type="success"
-                    @click="toguide">操作说明</el-button>
         </el-form-item>
       </el-form>
     </el-row>
@@ -86,7 +86,7 @@
               <el-tooltip placement="top" effect="light">
                   <div slot="content">
                       修改</br>
-                      <el-button type="text" @click="toModifyDataBase" style="float: right; ">详细说明</el-button>
+                      <el-button type="text" @click="toModifyDataBase" style="float: right; "><li class="el-icon-question"></li></el-button>
                   </div>
                   <el-button type="primary"
                   icon="el-icon-edit"
@@ -98,7 +98,7 @@
               <el-tooltip placement="top" effect="light">
                   <div slot="content">
                       删除数据库</br>
-                      <el-button type="text" @click="toModifyDataBase" style="float: right; ">详细说明</el-button>
+                      <el-button type="text" @click="toModifyDataBase" style="float: right; "><li class="el-icon-question"></li></el-button>
                   </div>
                   <el-button type="danger"
                   icon="el-icon-delete"

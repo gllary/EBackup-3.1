@@ -176,9 +176,9 @@
            // alert(index);
             let str = '#'+this.$route.query.aId;
             if(str == '#addManagementManual'){
-                document.querySelector('#addManagement').scrollIntoView({behavior:"smooth"});
+                document.querySelector('#addManagement').scrollIntoView({block:"start"});
             }else {
-                document.querySelector(str).scrollIntoView({behavior:'smooth'});
+                document.querySelector(str).scrollIntoView({block:"start"});
             }
             },
             toBottom(){
