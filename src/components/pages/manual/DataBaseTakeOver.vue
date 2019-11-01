@@ -199,7 +199,7 @@
               },
             toguide(toname,toId){
                 // console.log('hh');
-                this.$router.push({name: toname,query: { aId: toId }})
+                // this.$router.push({name: toname,query: { aId: toId }})
             },
             toBottom(){
                 this.$emit('func','disasterDrills')

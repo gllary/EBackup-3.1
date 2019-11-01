@@ -257,7 +257,7 @@ export default {
     },
     toguide(){
      // console.log('hh');
-      this.$router.push({ name: 'addDataBase', query: { aId:'addDataBaseManual' }})
+      this.$router.push({ name: 'addDataBase', query: { aId:'addDataBaseManual'}})
     },
     toModifyDataBase(){
       this.$router.push({ name: 'addDataBase', query: { aId:'modifyDataBase' }})

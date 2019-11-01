@@ -74,7 +74,6 @@
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="toguide">操作说明</el-dropdown-item>
               <el-dropdown-item command="backupPlan">备份计划</el-dropdown-item>
-              <el-dropdown-item command="backupPlan">备份计划</el-dropdown-item>
               <el-dropdown-item command="restorePlan">恢复计划</el-dropdown-item>
               <el-dropdown-item command="inspection" v-if="configMsg.inspectWeb">巡检  (已{{inspectActive ? '启用' : '禁用'}})</el-dropdown-item>
               <el-dropdown-item command="profile">个人中心</el-dropdown-item>
@@ -144,7 +143,8 @@ export default {
       lastTime: new Date().getTime(),
       timeOut: 30 * 60 * 1000,
       intervalObj: null,
-      url: '/socket-host'
+      url: '/socket-host',
+      // activedMenuStr:''
     };
   },
   components: {
@@ -194,6 +194,11 @@ export default {
         }
         return state.base.userInfo.loginName;
       },
+      userRole: state => {
+        if(state.base.userInfo.roles){
+          return state.base.userInfo.roles;
+        }
+      },
       menus: state =>
         state.base.routers.filter(router => router.meta && router.meta.title),
       // [],
@@ -230,7 +235,45 @@ export default {
       } else if (command === 'restorePlan') {
         this.$router.push({ name: 'restorePlans' });
       }else if (command === 'toguide') {
-        this.$router.push({ name: 'dataDaseTakeOver' });
+        // console.log(this.userRole)
+        // let activedMenuStr = '';
+        let idStr = '';
+        let nameStr = '';
+         let roleArray = this.userRole;
+        // for( let i=0;i<roleArray.length;i++){
+        //   // console.log(this.userRole)
+        //   if(roleArray[i].name=='文件管理员'){
+        //     activedMenuStr=activedMenuStr+'/'+'B'
+        //   }else if(roleArray[i].name=='Oracle管理员' || roleArray[i]=='SQL Server管理员' || roleArray[i]=='MySql管理员' || roleArray[i]=='DB2管理员' || roleArray[i]=='达梦管理员' || roleArray[i]=='Sybase管理员'|| roleArray[i]=='Cache管理员' || roleArray[i]=='InSql管理员'|| roleArray[i]=='Informix管理员'|| roleArray[i]=='PostgreSQL管理员'){
+        //     activedMenuStr=activedMenuStr+'/'+'C'+'A'
+        //   }else if(roleArray[i].name == '虚拟机管理员'){
+        //     activedMenuStr=activedMenuStr+'/'+'D'+'A'
+        //   }else if(roleArray[i].name == '应用服务管理员'){
+        //     activedMenuStr=activedMenuStr+'/'+'E'+'A'
+        //   }else if(roleArray[i].name == '超级管理员'){
+        //     activedMenuStr='/A/B/C/D/E/F/G/H'
+        //   }
+        // }
+
+        if(roleArray[0].name=='文件管理员'){
+            nameStr ='fileSystemDeletion';
+            idStr = 'fileSystemManual';
+          }else if(roleArray[0].name=='Oracle管理员' || roleArray[i]=='SQL Server管理员' || roleArray[i]=='MySql管理员' || roleArray[i]=='DB2管理员' || roleArray[i]=='达梦管理员' || roleArray[i]=='Sybase管理员'|| roleArray[i]=='Cache管理员' || roleArray[i]=='InSql管理员'|| roleArray[i]=='Informix管理员'|| roleArray[i]=='PostgreSQL管理员'){
+            nameStr ='addDataBase';
+            idStr = 'addDataBaseManual';
+          }else if(roleArray[0].name == '虚拟机管理员'){
+            nameStr ='addManagement';
+            idStr = 'addManagementManual';
+          }else if(roleArray[0].name == '应用服务管理员'){
+            nameStr ='addApplication';
+            idStr = 'addApplicationManual';
+          }else if(roleArray[0].name == '超级管理员'){
+            nameStr ='dataDaseTakeOver';
+            idStr = 'dataDaseTakeOver';
+          }
+
+        // console.log('***'+nameStr)
+        this.$router.push({ name: nameStr, query: { aId:idStr}});
       }
     },
     updateTheme(theme) {
