@@ -235,30 +235,13 @@ export default {
       } else if (command === 'restorePlan') {
         this.$router.push({ name: 'restorePlans' });
       }else if (command === 'toguide') {
-        // console.log(this.userRole)
-        // let activedMenuStr = '';
         let idStr = '';
         let nameStr = '';
          let roleArray = this.userRole;
-        // for( let i=0;i<roleArray.length;i++){
-        //   // console.log(this.userRole)
-        //   if(roleArray[i].name=='文件管理员'){
-        //     activedMenuStr=activedMenuStr+'/'+'B'
-        //   }else if(roleArray[i].name=='Oracle管理员' || roleArray[i]=='SQL Server管理员' || roleArray[i]=='MySql管理员' || roleArray[i]=='DB2管理员' || roleArray[i]=='达梦管理员' || roleArray[i]=='Sybase管理员'|| roleArray[i]=='Cache管理员' || roleArray[i]=='InSql管理员'|| roleArray[i]=='Informix管理员'|| roleArray[i]=='PostgreSQL管理员'){
-        //     activedMenuStr=activedMenuStr+'/'+'C'+'A'
-        //   }else if(roleArray[i].name == '虚拟机管理员'){
-        //     activedMenuStr=activedMenuStr+'/'+'D'+'A'
-        //   }else if(roleArray[i].name == '应用服务管理员'){
-        //     activedMenuStr=activedMenuStr+'/'+'E'+'A'
-        //   }else if(roleArray[i].name == '超级管理员'){
-        //     activedMenuStr='/A/B/C/D/E/F/G/H'
-        //   }
-        // }
-
         if(roleArray[0].name=='文件管理员'){
             nameStr ='fileSystemDeletion';
             idStr = 'fileSystemManual';
-          }else if(roleArray[0].name=='Oracle管理员' || roleArray[i]=='SQL Server管理员' || roleArray[i]=='MySql管理员' || roleArray[i]=='DB2管理员' || roleArray[i]=='达梦管理员' || roleArray[i]=='Sybase管理员'|| roleArray[i]=='Cache管理员' || roleArray[i]=='InSql管理员'|| roleArray[i]=='Informix管理员'|| roleArray[i]=='PostgreSQL管理员'){
+          }else if(roleArray[0].name=='Oracle管理员' || roleArray[0]=='SQL Server管理员' || roleArray[0]=='MySql管理员' || roleArray[0]=='DB2管理员' || roleArray[0]=='达梦管理员' || roleArray[0]=='Sybase管理员'|| roleArray[0]=='Cache管理员' || roleArray[0]=='InSql管理员'|| roleArray[0]=='Informix管理员'|| roleArray[0]=='PostgreSQL管理员'){
             nameStr ='addDataBase';
             idStr = 'addDataBaseManual';
           }else if(roleArray[0].name == '虚拟机管理员'){
